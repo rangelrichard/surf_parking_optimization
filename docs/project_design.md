@@ -5,7 +5,7 @@
 To develop a real-time decision-making tool that suggests the optimal surf spot based on **wave quality** and **parking availability**, helping users minimize travel and search time while maximizing surf conditions.
 
 ### **Hypothesis:**
-We believe that incorporating **real-time parking data** into surf spot selection will lead to **a more efficient and enjoyable surf experience** compared to using surf conditions alone.
+I believe that incorporating **real-time parking data** into surf spot selection will lead to **a more efficient and enjoyable surf experience** compared to using surf conditions alone.
 
 ### **Key Questions:**
 - How can we quantify and balance surf quality vs. parking ease?
@@ -40,10 +40,14 @@ We believe that incorporating **real-time parking data** into surf spot selectio
 ### **Optimization Approach:**
 - **User-defined weights:** Allow surfers to select how much they prioritize surf quality vs. ease of parking.
 - **Scoring Function:**
-  \[
-  Score = (w_1 \times Surf Quality) - (w_2 \times Parking Difficulty) - (w_3 \times Travel Time)
-  \]
-  where **w₁, w₂, w₃** are user-defined preferences.
+
+  $$\text{Score} = (w_1 \times \text{S}) - (w_2 \times (1 - \text{P}) - (w_3 \times (1 - \text{T})$$
+
+Where:
+- S = Normalized Surf Quality (0-1)
+- P = Normalized Parking Difficulty (0-1)
+- T = Normalized Travel Time (0-1)
+- **w₁, w₂, w₃** = User defined weights that sum to 1
 
 ---
 ## **4. Technical Implementation**
@@ -90,4 +94,3 @@ We believe that incorporating **real-time parking data** into surf spot selectio
   - `/docs/` → README, project summary, and write-ups
 
 ---
-💡 **Next Steps:** Start with **fetching real-time data** and visualizing parking vs. surf conditions! 🚀
