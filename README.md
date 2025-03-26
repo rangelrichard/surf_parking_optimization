@@ -25,7 +25,7 @@ As an avid surfer and ocean photographer, I often struggle with balancing **surf
 📂 `notebooks/` → Jupyter notebooks for different phases of the project  
 📂 `data/` → Processed datasets (if applicable)  
 📂 `src/` → Scripts for API calls & processing  
-📂 `docs/` → [Design Template](docs/design_template.md) & documentation  
+📂 `docs/` → [Project Design](docs/project_design.md) & documentation  
 📄 `README.md` → This project overview  
 
 ## **Next Steps**
